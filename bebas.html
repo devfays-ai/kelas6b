@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Papan Kelas | Kelas 6B SDN Rancamanyar 06</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Baloo+2:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+</head>
+<body data-theme="bluey">
+
+<nav class="navbar">
+  <a class="nav-brand" href="index.html">
+    <svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-school"/></svg>
+    <span class="brand-text">Kelas <span class="accent-text">6B</span> <span class="brand-sep">|</span> SDN Rancamanyar 06</span>
+  </a>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html"  class="nav-link"><svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-home"/></svg> Beranda</a></li>
+    <li><a href="siswa.html"  class="nav-link"><svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-people"/></svg> Siswa</a></li>
+    <li><a href="absen.html"  class="nav-link"><svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-clipboard"/></svg> Absen</a></li>
+    <li><a href="tka.html"    class="nav-link"><svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-books"/></svg> Kisi TKA</a></li>
+    <li><a href="galeri.html" class="nav-link"><svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-camera"/></svg> Kenangan</a></li>
+    <li><a href="bebas.html"  class="nav-link active"><svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-chat"/></svg> Bebas</a></li>
+  </ul>
+  <div class="theme-switcher">
+    <button class="theme-btn" data-theme="bluey" title="Bluey"><svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-heart-blue"/></svg></button>
+    <button class="theme-btn" data-theme="neon"  title="Neon"><svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-heart-green"/></svg></button>
+    <button class="theme-btn" data-theme="pinky" title="Pinky"><svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-heart-pink"/></svg></button>
+  </div>
+</nav>
+
+<main class="main-content">
+
+  <div class="page-header">
+    <h1 class="page-title">
+      <svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-chat"/></svg>
+      Papan Kelas 6B
+    </h1>
+    <p class="page-subtitle">Pengumuman, pesan wali kelas, dan catatan &mdash; SDN Rancamanyar 06</p>
+  </div>
+
+  <div class="bebas-grid">
+
+    <!-- PESAN WALI KELAS -->
+    <div class="pengumuman-card highlight">
+      <div class="pk-header">
+        <svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-megaphone"/></svg>
+        Pesan Wali Kelas
+      </div>
+      <div class="pk-body">
+        <p>Anak-anak Kelas 6B yang Ibu sayangi,</p>
+        <p>Teruslah semangat dalam belajar! Kalian adalah generasi yang luar biasa. Jaga kebersamaan, saling mendukung, dan terus tingkatkan prestasi. Ibu bangga dengan kalian semua!
+          <svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-muscle"/></svg>
+        </p>
+        <p class="pk-sign">&mdash; Bu Atun</p>
+      </div>
+    </div>
+
+    <!-- PENGUMUMAN -->
+    <div class="pengumuman-card">
+      <div class="pk-header">
+        <svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-pin"/></svg>
+        Pengumuman Terbaru
+      </div>
+      <div class="pk-body">
+        <ul class="pengumuman-list">
+          <li>
+            <svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-memo"/></svg>
+            Persiapan TKA dimulai &mdash; rajin belajar ya!
+          </li>
+          <li>
+            <svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-broom"/></svg>
+            Jadwal piket kelas tetap berjalan setiap hari
+          </li>
+          <li>
+            <svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-books"/></svg>
+            Kumpulkan tugas sesuai tenggat waktu
+          </li>
+          <li>
+            <svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-school"/></svg>
+            Pakai seragam lengkap setiap hari sekolah
+          </li>
+          <li>
+            <svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-calendar"/></svg>
+            Datang tepat waktu, jangan terlambat!
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- JADWAL PIKET -->
+    <div class="pengumuman-card">
+      <div class="pk-header">
+        <svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-cal-spiral"/></svg>
+        Jadwal Piket
+      </div>
+      <div class="pk-body">
+        <table class="piket-table">
+          <tr><th>Hari</th><th>Petugas</th></tr>
+          <tr><td>Senin</td><td>Tim A</td></tr>
+          <tr><td>Selasa</td><td>Tim B</td></tr>
+          <tr><td>Rabu</td><td>Tim C</td></tr>
+          <tr><td>Kamis</td><td>Tim D</td></tr>
+          <tr><td>Jumat</td><td>Tim E</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- WALL OF FAME -->
+    <div class="pengumuman-card">
+      <div class="pk-header">
+        <svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-trophy"/></svg>
+        Wall of Fame
+      </div>
+      <div class="pk-body">
+        <p>Apresiasi untuk siswa berprestasi bulan ini:</p>
+        <div class="wof-list">
+          <div class="wof-item">
+            <svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-crown"/></svg>
+            Siswa Terbaik &mdash; <em>Diisi nanti</em>
+          </div>
+          <div class="wof-item">
+            <svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-books"/></svg>
+            Rajin Belajar &mdash; <em>Diisi nanti</em>
+          </div>
+          <div class="wof-item">
+            <svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-people"/></svg>
+            Paling Kompak &mdash; <em>Seluruh Kelas 6B!</em>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CERITA KELAS — FULL WIDTH -->
+    <div class="pengumuman-card full-width">
+      <div class="pk-header">
+        <svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-love-letter"/></svg>
+        Cerita Kelas 6B
+      </div>
+      <div class="pk-body">
+        <p>Kelas 6B adalah keluarga kecil yang penuh warna. Dari kunjungan museum yang seru, renang bareng yang menyenangkan, sampai belajar bareng yang kadang bikin ngantuk tapi tetap semangat!
+          <svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-smile"/></svg>
+        </p>
+        <p>Setiap hari di kelas ini selalu ada tawa, kerja sama, dan semangat yang membara. Kita memang berbeda-beda, tapi itulah yang membuat kita istimewa. Satu kelas, satu keluarga!
+          <svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-rainbow"/></svg>
+        </p>
+        <p><em>Dika &amp; Meisya &mdash; kita kangen kalian!
+          <svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-heart-blue"/></svg>
+        </em></p>
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+<footer class="footer">
+  <p>Made with <svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-heart-red"/></svg> untuk Kelas 6B &middot; SDN Rancamanyar 06</p>
+  <p>Wali Kelas: Bu Atun &middot; Ketua: Arkhan &middot; Wakil: Farhan</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

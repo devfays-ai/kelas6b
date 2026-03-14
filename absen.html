@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Absen | Kelas 6B SDN Rancamanyar 06</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Baloo+2:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+</head>
+<body data-theme="bluey">
+
+<nav class="navbar">
+  <a class="nav-brand" href="index.html">
+    <svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-school"/></svg>
+    <span class="brand-text">Kelas <span class="accent-text">6B</span> <span class="brand-sep">|</span> SDN Rancamanyar 06</span>
+  </a>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html"  class="nav-link"><svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-home"/></svg> Beranda</a></li>
+    <li><a href="siswa.html"  class="nav-link"><svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-people"/></svg> Siswa</a></li>
+    <li><a href="absen.html"  class="nav-link active"><svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-clipboard"/></svg> Absen</a></li>
+    <li><a href="tka.html"    class="nav-link"><svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-books"/></svg> Kisi TKA</a></li>
+    <li><a href="galeri.html" class="nav-link"><svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-camera"/></svg> Kenangan</a></li>
+    <li><a href="bebas.html"  class="nav-link"><svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-chat"/></svg> Bebas</a></li>
+  </ul>
+  <div class="theme-switcher">
+    <button class="theme-btn" data-theme="bluey" title="Bluey"><svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-heart-blue"/></svg></button>
+    <button class="theme-btn" data-theme="neon"  title="Neon"><svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-heart-green"/></svg></button>
+    <button class="theme-btn" data-theme="pinky" title="Pinky"><svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-heart-pink"/></svg></button>
+  </div>
+</nav>
+
+<main class="main-content">
+
+  <div class="page-header">
+    <h1 class="page-title">
+      <svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-clipboard"/></svg>
+      Data Absensi Kelas 6B
+    </h1>
+    <p class="page-subtitle">Rekapitulasi kehadiran siswa per bulan &mdash; SDN Rancamanyar 06</p>
+  </div>
+
+  <div class="absen-tabs">
+    <button class="absen-tab active" onclick="switchAbsen(this,'jan')">Januari</button>
+    <button class="absen-tab" onclick="switchAbsen(this,'feb')">Februari</button>
+    <button class="absen-tab" onclick="switchAbsen(this,'mar')">Maret</button>
+    <button class="absen-tab" onclick="switchAbsen(this,'apr')">April</button>
+    <button class="absen-tab" onclick="switchAbsen(this,'mei')">Mei</button>
+    <button class="absen-tab" onclick="switchAbsen(this,'jun')">Juni</button>
+  </div>
+
+  <div class="absen-legend">
+    <span class="legend-item"><span class="leg-dot hadir"></span> Hadir (H)</span>
+    <span class="legend-item"><span class="leg-dot sakit"></span> Sakit (S)</span>
+    <span class="legend-item"><span class="leg-dot izin"></span> Izin (I)</span>
+    <span class="legend-item"><span class="leg-dot alpha"></span> Alpha (A)</span>
+  </div>
+
+  <div class="table-wrap">
+    <table class="absen-table" id="absenTable">
+      <thead id="absenHead"></thead>
+      <tbody id="absenBody"></tbody>
+    </table>
+  </div>
+
+  <div class="absen-summary" id="absenSummary"></div>
+
+</main>
+
+<footer class="footer">
+  <p>Made with <svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-heart-red"/></svg> untuk Kelas 6B &middot; SDN Rancamanyar 06</p>
+  <p>Wali Kelas: Bu Atun &middot; Ketua: Arkhan &middot; Wakil: Farhan</p>
+</footer>
+
+<script src="script.js"></script>
+<script>renderAbsen('jan');</script>
+</body>
+</html>

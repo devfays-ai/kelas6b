@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Foto Kenangan | Kelas 6B SDN Rancamanyar 06</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Baloo+2:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+</head>
+<body data-theme="bluey">
+
+<nav class="navbar">
+  <a class="nav-brand" href="index.html">
+    <svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-school"/></svg>
+    <span class="brand-text">Kelas <span class="accent-text">6B</span> <span class="brand-sep">|</span> SDN Rancamanyar 06</span>
+  </a>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html"  class="nav-link"><svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-home"/></svg> Beranda</a></li>
+    <li><a href="siswa.html"  class="nav-link"><svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-people"/></svg> Siswa</a></li>
+    <li><a href="absen.html"  class="nav-link"><svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-clipboard"/></svg> Absen</a></li>
+    <li><a href="tka.html"    class="nav-link"><svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-books"/></svg> Kisi TKA</a></li>
+    <li><a href="galeri.html" class="nav-link active"><svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-camera"/></svg> Kenangan</a></li>
+    <li><a href="bebas.html"  class="nav-link"><svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-chat"/></svg> Bebas</a></li>
+  </ul>
+  <div class="theme-switcher">
+    <button class="theme-btn" data-theme="bluey" title="Bluey"><svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-heart-blue"/></svg></button>
+    <button class="theme-btn" data-theme="neon"  title="Neon"><svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-heart-green"/></svg></button>
+    <button class="theme-btn" data-theme="pinky" title="Pinky"><svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-heart-pink"/></svg></button>
+  </div>
+</nav>
+
+<main class="main-content">
+
+  <div class="page-header">
+    <h1 class="page-title">
+      <svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-camera"/></svg>
+      Foto Kenangan Kelas 6B
+    </h1>
+    <p class="page-subtitle">Momen indah yang kita ukir bersama &mdash; SDN Rancamanyar 06
+      <svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-sparkle"/></svg>
+    </p>
+  </div>
+
+  <div class="galeri-filter">
+    <button class="gal-btn active" onclick="filterGaleri(this,'semua')">Semua</button>
+    <button class="gal-btn" onclick="filterGaleri(this,'kunjungan')">Kunjungan</button>
+    <button class="gal-btn" onclick="filterGaleri(this,'olahraga')">Olahraga</button>
+    <button class="gal-btn" onclick="filterGaleri(this,'kelas')">Kegiatan Kelas</button>
+  </div>
+
+  <div class="galeri-grid" id="galeriGrid">
+
+    <div class="gal-item" data-category="kunjungan"
+         onclick="openLightbox('images/foto-kelas.jpg','Kunjungan Museum — Foto Bersama Kelas 6B')">
+      <img src="images/foto-kelas.jpg" alt="Kunjungan Museum"
+           onerror="this.src='https://placehold.co/400x300/4e80de/fff?text=Kunjungan+Museum'"/>
+      <div class="gal-overlay">
+        <span class="gal-caption">
+          <svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-pillars"/></svg>
+          Kunjungan Museum
+        </span>
+      </div>
+    </div>
+
+    <div class="gal-item" data-category="olahraga"
+         onclick="openLightbox('images/foto-renang.jpg','Renang Bersama — Kelas 6B SDN Rancamanyar 06')">
+      <img src="images/foto-renang.jpg" alt="Renang Bersama"
+           onerror="this.src='https://placehold.co/400x300/0ea5e9/fff?text=Renang+Bersama'"/>
+      <div class="gal-overlay">
+        <span class="gal-caption">
+          <svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-swimmer"/></svg>
+          Renang Bersama
+        </span>
+      </div>
+    </div>
+
+    <div class="gal-item" data-category="kelas"
+         onclick="openLightbox('images/foto3.jpg','Kegiatan Kelas 6B')">
+      <img src="images/foto3.jpg" alt="Kegiatan Kelas"
+           onerror="this.src='https://placehold.co/400x300/10b981/fff?text=Tambahkan+Foto+3'"/>
+      <div class="gal-overlay">
+        <span class="gal-caption">
+          <svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-camera"/></svg>
+          Kegiatan Kelas
+        </span>
+      </div>
+    </div>
+
+    <div class="gal-item" data-category="kelas"
+         onclick="openLightbox('images/foto4.jpg','Momen Bersama Kelas 6B')">
+      <img src="images/foto4.jpg" alt="Momen Bersama"
+           onerror="this.src='https://placehold.co/400x300/f59e0b/fff?text=Tambahkan+Foto+4'"/>
+      <div class="gal-overlay">
+        <span class="gal-caption">
+          <svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-star"/></svg>
+          Momen Bersama
+        </span>
+      </div>
+    </div>
+
+    <div class="gal-item" data-category="kunjungan"
+         onclick="openLightbox('images/foto5.jpg','Kunjungan Edukatif Kelas 6B')">
+      <img src="images/foto5.jpg" alt="Kunjungan Edukatif"
+           onerror="this.src='https://placehold.co/400x300/8b5cf6/fff?text=Tambahkan+Foto+5'"/>
+      <div class="gal-overlay">
+        <span class="gal-caption">
+          <svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-school"/></svg>
+          Kunjungan Edukatif
+        </span>
+      </div>
+    </div>
+
+    <div class="gal-item" data-category="olahraga"
+         onclick="openLightbox('images/foto6.jpg','Kegiatan Olahraga Kelas 6B')">
+      <img src="images/foto6.jpg" alt="Kegiatan Olahraga"
+           onerror="this.src='https://placehold.co/400x300/ef4444/fff?text=Tambahkan+Foto+6'"/>
+      <div class="gal-overlay">
+        <span class="gal-caption">
+          <svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-trophy"/></svg>
+          Kegiatan Olahraga
+        </span>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="galeri-hint">
+    <svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-bulb"/></svg>
+    Ganti foto di folder <code>images/</code> dengan foto asli kelas. Nama file: foto-kelas.jpg, foto-renang.jpg, foto3.jpg &mdash; foto6.jpg
+  </p>
+
+</main>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lb-close" onclick="closeLightbox()">&#x2715;</button>
+  <img class="lb-img" id="lbImg" src="" alt=""/>
+  <p class="lb-caption" id="lbCaption"></p>
+</div>
+
+<footer class="footer">
+  <p>Made with <svg class="ei" aria-hidden="true"><use href="icons/emoji.svg#ei-heart-red"/></svg> untuk Kelas 6B &middot; SDN Rancamanyar 06</p>
+  <p>Wali Kelas: Bu Atun &middot; Ketua: Arkhan &middot; Wakil: Farhan</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
